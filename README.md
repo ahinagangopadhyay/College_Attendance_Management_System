@@ -57,7 +57,7 @@ College_Attendance_System/
 │   ├── insert_data.sql      # Adds sample data
 │   └── queries.sql          # Contains all our required queries
 |   └── stored_procedures.sql #For lowest attendance
-|   └── triggers.sql #To stop  insertion
+|   └── triggers.sql #To stop  insertion if we wish to prevent further insertion
 ├── Reports/
 │   └── Project_Report.docx
 ├── Screenshots/
