@@ -1,3 +1,6 @@
+--Additionally this trigger can be implemented to show a message everytime a new insertion is done
+--Q.4
+    
 DELIMITER $$
 
 CREATE TRIGGER NotifyNewAttendanceInsert
