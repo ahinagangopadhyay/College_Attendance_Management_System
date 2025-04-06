@@ -179,7 +179,7 @@ GROUP BY G.StudentID, G.grp, S.Name
 HAVING COUNT(*) > 3;
 
 -- Q.9 Fetch subjects with the lowest attendance rate.
--- The procedure is written in create_procedures.sql file
+-- The procedure is written in stored_procedures.sql file
 
 CALL GetLowestAttendanceSubject();
 
