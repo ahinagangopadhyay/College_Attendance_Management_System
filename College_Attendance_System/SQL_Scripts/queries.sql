@@ -102,6 +102,18 @@ VALUES (62, 1, 101, '2025-03-29', 'Absent');
 
 -- Q.5 Generate a monthly attendance report.
 --Subjectwise:
+SELECT 
+    S.Name,
+    Sub.SubjectName,
+    EXTRACT(MONTH FROM A.Date) AS Month,
+    SUM(CASE WHEN A.Status = 'Present' THEN 1 ELSE 0 END) AS Presents,
+    SUM(CASE WHEN A.Status = 'Absent' THEN 1 ELSE 0 END) AS Absents,
+    ROUND(SUM(CASE WHEN A.Status = 'Present' THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2) AS AttendancePercentage
+FROM Attendance A
+JOIN Students S ON A.StudentID = S.StudentID
+JOIN Subjects Sub ON A.SubjectID = Sub.SubjectID
+GROUP BY S.Name, Sub.SubjectName, EXTRACT(MONTH FROM A.Date)
+ORDER BY Month, S.Name;
 
 
 -- Q.6 Identify students with the highest attendance.
