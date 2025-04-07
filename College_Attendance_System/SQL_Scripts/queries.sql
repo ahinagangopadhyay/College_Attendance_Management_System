@@ -12,7 +12,6 @@ WHERE a.StudentID = 3
 ORDER BY a.Date;
 
 -- Q.2. Count total present and absent days for a student.
---(Assumption taken by us: A student is considered as present if he/she is present in all classes of that day)
 WITH SubjectTotals AS (
     SELECT 
         StudentID, 
@@ -102,12 +101,10 @@ ORDER BY AttendancePercentage;
 
 
 -- Q.4 Insert a new attendance record.
---Trigger also introduced to give a message whenever new insertion done
 INSERT INTO Attendance (AttendanceID, StudentID, SubjectID, Date, Status)
 VALUES (62, 1, 101, '2025-03-29', 'Absent'); 
 
 -- Q.5 Generate a monthly attendance report.
---Subjectwise:
 SELECT 
     S.Name,
     Sub.SubjectName,
@@ -178,9 +175,7 @@ WHERE G.Status = 'Absent'
 GROUP BY G.StudentID, G.grp, S.Name
 HAVING COUNT(*) > 3;
 
--- Q.9 Fetch subjects with the lowest attendance rate.
--- The procedure is written in stored_procedures.sql file
-
+-- Q.9 Fetch subjects with the lowest attendance rate.(The procedure is written in stored_procedures.sql file)
 CALL GetLowestAttendanceSubject();
 
 -- 10.Calculate the average attendance percentage of each course.
