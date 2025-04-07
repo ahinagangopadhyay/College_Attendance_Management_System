@@ -1,4 +1,4 @@
---Additionally this trigger can be implemented to show an error message everytime a new insertion is attempted if we want to prevent insertion
+-- Additionally this trigger can be implemented to show an error message everytime a new insertion is attempted if we want to prevent insertion
 DELIMITER $$
 
 CREATE TRIGGER NotifyNewAttendanceInsert
