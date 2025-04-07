@@ -1,9 +1,9 @@
 INSERT INTO Students (StudentID, Name, RollNumber, Course) VALUES
-     (1, 'Amisha Mehta', '81', 'CSE'),
-     (2, 'Tanya Nair', '82', 'CSE'),
-     (3, 'Adrika Das', '83', 'ECE'),
-     (4, 'Ishita Sen', '84', 'ECE'),
-    (5, 'Amit Roy', '85', 'CSE');
+(1, 'Amisha Mehta', '81', 'CSE'),
+(2, 'Tanya Nair', '82', 'CSE'),
+(3, 'Adrika Das', '83', 'ECE'),
+(4, 'Ishita Sen', '84', 'ECE'),
+(5, 'Amit Roy', '85', 'CSE');
 
 INSERT INTO Subjects (SubjectID, SubjectName, TeacherID) VALUES
 (101, 'DBMS', 1001),
