@@ -1,4 +1,4 @@
---Q.9 Procedure stored to execute required query
+-- Q.9 Procedure stored to execute required query
 DELIMITER $$
 
 CREATE PROCEDURE GetLowestAttendanceSubject()
